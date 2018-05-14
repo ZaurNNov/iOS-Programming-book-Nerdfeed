@@ -8,6 +8,14 @@
 
 #import "AppDelegate.h"
 #import "CoursesTableViewController.h"
+#import "WebViewController.h"
+
+@interface CoursesTableViewController()
+
+@property (nonatomic) NSURLSession *session;
+@property (nonatomic, copy) NSArray *courses;
+
+@end
 
 @interface AppDelegate ()
 
@@ -22,8 +30,10 @@
     
     CoursesTableViewController *ctvc = [[CoursesTableViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *masterNavigationController = [[UINavigationController alloc] initWithRootViewController:ctvc];
-    self.window.rootViewController = masterNavigationController;
+    WebViewController *wvc = [[WebViewController alloc] init];
+    ctvc.webViewController = wvc;
     
+    self.window.rootViewController = masterNavigationController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

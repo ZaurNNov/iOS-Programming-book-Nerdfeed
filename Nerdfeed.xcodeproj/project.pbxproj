@@ -12,6 +12,7 @@
 		CE15AF3220A99A9100270EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE15AF3020A99A9100270EE9 /* LaunchScreen.storyboard */; };
 		CE15AF3520A99A9100270EE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE15AF3420A99A9100270EE9 /* main.m */; };
 		CE15AF3D20A99B3200270EE9 /* CoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE15AF3C20A99B3200270EE9 /* CoursesTableViewController.m */; };
+		CE9A6F6920A9BED70081B662 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9A6F6820A9BED70081B662 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		CE15AF3420A99A9100270EE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE15AF3B20A99B3200270EE9 /* CoursesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoursesTableViewController.h; sourceTree = "<group>"; };
 		CE15AF3C20A99B3200270EE9 /* CoursesTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoursesTableViewController.m; sourceTree = "<group>"; };
+		CE9A6F6720A9BED70081B662 /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		CE9A6F6820A9BED70081B662 /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +67,8 @@
 				CE15AF3420A99A9100270EE9 /* main.m */,
 				CE15AF3B20A99B3200270EE9 /* CoursesTableViewController.h */,
 				CE15AF3C20A99B3200270EE9 /* CoursesTableViewController.m */,
+				CE9A6F6720A9BED70081B662 /* WebViewController.h */,
+				CE9A6F6820A9BED70081B662 /* WebViewController.m */,
 			);
 			path = Nerdfeed;
 			sourceTree = "<group>";
@@ -140,6 +145,7 @@
 				CE15AF3D20A99B3200270EE9 /* CoursesTableViewController.m in Sources */,
 				CE15AF3520A99A9100270EE9 /* main.m in Sources */,
 				CE15AF2D20A99A8F00270EE9 /* AppDelegate.m in Sources */,
+				CE9A6F6920A9BED70081B662 /* WebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
