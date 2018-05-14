@@ -28,9 +28,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *course = self.courses[indexPath.row];
-    NSURL *URL = [NSURL URLWithString:course[@"url"]];
+    NSURL *url = [NSURL URLWithString:course[@"url"]];
+    
+    self.webViewController = [[WebViewController alloc] init];
+    self.webViewController.URLz = url;
     self.webViewController.title = course[@"title"];
-    self.webViewController.URLz = URL;
+
     [self.navigationController pushViewController:self.webViewController animated:YES];
 }
 
