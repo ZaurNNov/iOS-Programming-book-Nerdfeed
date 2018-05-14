@@ -11,6 +11,7 @@
 		CE15AF2F20A99A9100270EE9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE15AF2E20A99A9100270EE9 /* Assets.xcassets */; };
 		CE15AF3220A99A9100270EE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE15AF3020A99A9100270EE9 /* LaunchScreen.storyboard */; };
 		CE15AF3520A99A9100270EE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE15AF3420A99A9100270EE9 /* main.m */; };
+		CE15AF3D20A99B3200270EE9 /* CoursesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE15AF3C20A99B3200270EE9 /* CoursesTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,8 @@
 		CE15AF3120A99A9100270EE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE15AF3320A99A9100270EE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CE15AF3420A99A9100270EE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE15AF3B20A99B3200270EE9 /* CoursesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoursesTableViewController.h; sourceTree = "<group>"; };
+		CE15AF3C20A99B3200270EE9 /* CoursesTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoursesTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +62,8 @@
 				CE15AF3020A99A9100270EE9 /* LaunchScreen.storyboard */,
 				CE15AF3320A99A9100270EE9 /* Info.plist */,
 				CE15AF3420A99A9100270EE9 /* main.m */,
+				CE15AF3B20A99B3200270EE9 /* CoursesTableViewController.h */,
+				CE15AF3C20A99B3200270EE9 /* CoursesTableViewController.m */,
 			);
 			path = Nerdfeed;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE15AF3D20A99B3200270EE9 /* CoursesTableViewController.m in Sources */,
 				CE15AF3520A99A9100270EE9 /* main.m in Sources */,
 				CE15AF2D20A99A8F00270EE9 /* AppDelegate.m in Sources */,
 			);
@@ -273,7 +279,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = StudyTest.Nerdfeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -289,7 +295,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = StudyTest.Nerdfeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
