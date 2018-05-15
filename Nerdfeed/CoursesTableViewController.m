@@ -29,12 +29,16 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSDictionary *course = self.courses[indexPath.row];
     NSURL *url = [NSURL URLWithString:course[@"url"]];
-    
-    self.webViewController = [[WebViewController alloc] init];
+
     self.webViewController.URLz = url;
     self.webViewController.title = course[@"title"];
-
-    [self.navigationController pushViewController:self.webViewController animated:YES];
+    self.webViewController.webView.scalesPageToFit = YES;
+    
+    if (!self.splitViewController) {
+        
+        [self.navigationController pushViewController:self.webViewController animated:YES];
+    }
+    //[self.navigationController pushViewController:self.webViewController animated:YES];
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

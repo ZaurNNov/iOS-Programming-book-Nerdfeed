@@ -17,7 +17,7 @@
 
 @end
 
-@interface AppDelegate ()
+@interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
 
@@ -29,11 +29,22 @@
     // Override point for customization after application launch.
     
     CoursesTableViewController *ctvc = [[CoursesTableViewController alloc] initWithStyle:UITableViewStylePlain];
-    UINavigationController *masterNavigationController = [[UINavigationController alloc] initWithRootViewController:ctvc];
+    UINavigationController *masterNC = [[UINavigationController alloc] initWithRootViewController:ctvc];
     WebViewController *wvc = [[WebViewController alloc] init];
     ctvc.webViewController = wvc;
     
-    self.window.rootViewController = masterNavigationController;
+    // check to make sure we are on iPad?
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        //webView must be NC!
+        UINavigationController *detailNC = [[UINavigationController alloc] initWithRootViewController:wvc];
+        UISplitViewController *svc = [[UISplitViewController alloc] init];
+        svc.delegate = self;
+        svc.viewControllers = @[masterNC, detailNC];
+        self.window.rootViewController = svc;
+    } else {
+        self.window.rootViewController = masterNC;
+    }
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

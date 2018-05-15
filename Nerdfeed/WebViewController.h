@@ -11,5 +11,6 @@
 @interface WebViewController : UIViewController
 
 @property (nonatomic) NSURL *URLz;
+@property (nonatomic) UIWebView *webView;
 
 @end
