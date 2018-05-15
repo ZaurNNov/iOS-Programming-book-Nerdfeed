@@ -8,7 +8,7 @@
 
 #import "WebViewController.h"
 
-@interface WebViewController () <UIWebViewDelegate>
+@interface WebViewController () <UIWebViewDelegate> 
 
 //@property (nonatomic) UIToolbar *toolBar;
 @property (nonatomic) UIBarButtonItem *back;
@@ -62,12 +62,14 @@
         CGRect naviFrame = self.navigationController.navigationBar.frame;
         self.navigationController.navigationBar.topItem.rightBarButtonItem = self.forward;
         self.navigationController.navigationBar.topItem.leftBarButtonItem = self.back;
-        
+
         CGRect webViewFrame = CGRectMake(0, 0, naviFrame.size.width, self.view.frame.size.height);
         self.webView.frame = webViewFrame;
     } else {
         self.webView.frame = self.view.frame;
     }
+    
+    //self.webView.frame = self.view.frame;
     
     self.webView.scalesPageToFit = YES;
     self.webView.delegate = self;
@@ -81,12 +83,26 @@
     [self.forward setEnabled:[webView canGoForward]];
 }
 
--(void)setURLz:(NSURL *)URLz {
-    _URLz = URLz;
-    if (_URLz) {
-        NSURLRequest *req = [NSURLRequest requestWithURL:_URLz];
+-(void)setUrl:(NSURL *)URLz {
+    _url = URLz;
+    if (_url) {
+        NSURLRequest *req = [NSURLRequest requestWithURL:_url];
         //[(UIWebView *)self.view loadRequest:req];
         [self.webView loadRequest:req];
+    }
+}
+
+// SplitDelegate
+-(void)splitViewController:(UISplitViewController *)svc willHideViewController:(UIViewController *)aViewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)pc {
+    // if barButton title nil?
+    barButtonItem.title = @"New Title";
+    self.navigationItem.leftBarButtonItem = barButtonItem;
+}
+
+-(void)splitViewController:(UISplitViewController *)svc willShowViewController:(UIViewController *)aViewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem {
+    // remove barButton item from NC
+    if (barButtonItem == self.navigationItem.leftBarButtonItem) {
+        self.navigationItem.leftBarButtonItem = nil;
     }
 }
 

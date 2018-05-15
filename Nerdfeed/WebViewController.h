@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WebViewController : UIViewController
+@interface WebViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (nonatomic) NSURL *URLz;
+@property (nonatomic) NSURL *url;
 @property (nonatomic) UIWebView *webView;
 
 @end

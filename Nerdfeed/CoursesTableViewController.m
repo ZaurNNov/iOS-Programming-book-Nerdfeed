@@ -30,7 +30,7 @@
     NSDictionary *course = self.courses[indexPath.row];
     NSURL *url = [NSURL URLWithString:course[@"url"]];
 
-    self.webViewController.URLz = url;
+    self.webViewController.url = url;
     self.webViewController.title = course[@"title"];
     self.webViewController.webView.scalesPageToFit = YES;
     
